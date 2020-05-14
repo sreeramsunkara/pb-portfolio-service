@@ -1,0 +1,40 @@
+pivotal:
+  accountsService:
+    name: pb-accounts
+  portfolioService:
+    name: pb-portfolio
+  quotesService:
+    name: pb-quotes
+  userService:
+    name: pb-user
+  analyticsService:
+    name: pb-analytics
+  summary:
+    quotes: 3
+    symbols:
+      it: VMW,IBM,GOOG,AMD,HPQ,CSCO,AAPL
+      fs: JPM,C,MS,BAC,GS,WFC,BK
+
+
+spring:
+  application:
+    name: pb-portfolio
+  datasource:
+    url: jdbc:mysql://pb-mysql:3306/traderdb
+    username: trader
+    password: P@ssw0rd
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+logging:
+  level:
+    io:
+      pivotal: DEBUG
+    org:
+      springframework:
+        web: WARN
+        cloud: WARN

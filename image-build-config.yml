@@ -1,0 +1,6 @@
+source: 
+  git:
+    url: https://github.com/sreeramsunkara/pb-portfolio-service.git
+    revision: master
+image:
+  tag: sreeramsunkara/pb-portfolio-service
